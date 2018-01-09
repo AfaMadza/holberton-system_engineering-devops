@@ -1,0 +1,1 @@
+This project familiarizes students with the basics of shell. Students are expected to learn how to navigate, manupulate files, work with commands, read man pages, and use keyboard shortcuts in the shell.
