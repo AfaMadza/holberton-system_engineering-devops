@@ -1,0 +1,2 @@
+#!/bin/bash
+nl iacta | grep 3
