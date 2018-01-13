@@ -1,0 +1,2 @@
+#!/bin/bash
+echo 'aaacccccc' | tr ac ze
