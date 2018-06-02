@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#Script displays content of current directory in specified format
+
+for i in *; do
+    if [ -f "$i" ]; then
+	echo "$i" | cut -d- -f2
+    fi
+done

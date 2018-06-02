@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# This script prints 1 to 20 with a few exceptions
+
+count=1
+while [ $count -le 20 ]
+do
+case $count in
+    4)
+        echo "bad luck from China"
+	;;
+    9)
+        echo "bad luck from Japan"
+	;;
+    17)
+        echo "bad luck from Italy"
+	;;
+    *)
+        echo $count
+	;;
+    esac
+    ((count++))
+done

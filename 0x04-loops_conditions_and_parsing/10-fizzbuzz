@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# This script prints the Fizz Buzz test
+i=1
+while ((i <= 100))
+do
+    if ((i % 3 == 0 && i % 5 != 0)); then
+        echo "Fizz"
+    elif ((i % 3 != 0 && i % 5 == 0)); then
+        echo "Buzz"
+    elif ((i % 3 == 0 && i % 5 == 0)); then
+        echo "FizzBuzz"
+    else
+        echo "$i"
+    fi
+    ((i++))
+done
