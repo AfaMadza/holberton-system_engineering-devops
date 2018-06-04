@@ -1,4 +1,4 @@
-i#!/usr/bin/env bash
+#!/usr/bin/env bash
 # This script displays time for 12hrs and 59mins
 
 hrs=0
