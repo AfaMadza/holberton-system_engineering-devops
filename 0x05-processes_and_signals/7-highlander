@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Hangles SIGTERM for a specific process
+invincible()
+{
+    echo "I am invincible!!!"
+}
+count=1
+while [ $count -eq 1 ]; do
+    trap invincible SIGTERM
+    echo "To infinity and beyond"
+    sleep 2
+done
