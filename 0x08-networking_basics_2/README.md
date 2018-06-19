@@ -1,4 +1,4 @@
-# Network Basics Part (1/2)
+# Network Basics Part (2/2)
 
 ## Description
 By the end of this project, students should be able to explain and understand:
@@ -35,7 +35,7 @@ By the end of this project, students should be able to explain and understand:
 * __Style:__ [Shellcheck](https://github.com/koalaman/shellcheck)
 
 ## Concepts
-* ``TCP/UDP``, ``WAN``, ``LAN``, ``IP``
+* ``sed``, ``ifconfig``, ``nc``
 
 ## Author
 
