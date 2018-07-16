@@ -1,0 +1,4 @@
+# Disable Password Authentication
+PasswordAuthentication no
+ForwardAgent yes
+IdentityFile ~/.ssh/holberton
