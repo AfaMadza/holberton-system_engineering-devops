@@ -2,8 +2,7 @@
 # Installs NGINX on ubuntu with redirect
 apt-get update
 apt-get -y install nginx
-mv /usr/share/nginx/html/index.html /usr/share/nginx/html/index.html.bak
-echo "Holberton School for the win!" > /usr/share/nginx/html/index.html
+echo "Holberton School for the win!" | sudo tee /usr/share/nginx/html/index.html
 service nginx start
 redirect_perm="location /redirect_me {\n return 301 http://us.asos.com/men/$request_uri;\n}\n"
 sed -i "30i $redirect_perm"  /etc/nginx/sites-available/default
