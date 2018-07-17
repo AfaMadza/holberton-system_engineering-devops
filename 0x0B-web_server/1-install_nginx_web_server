@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Installs NGINX on ubuntu
+apt-get update
+apt-get -y install nginx
+mv /usr/share/nginx/html/index.html /usr/share/nginx/html/index.html.bak
+echo "Holberton School for the win!" > /usr/share/nginx/html/index.html
+service nginx restart

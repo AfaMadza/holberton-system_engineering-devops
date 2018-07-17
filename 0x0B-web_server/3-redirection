@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Installs NGINX on ubuntu with redirect
+apt-get update
+apt-get -y install nginx
+redirect_perm="location /redirect_me {\n return 301 http://us.asos.com/men/$request_uri;\n}\n"
+sed -i "30i $redirect_perm"  /etc/nginx/sites-available/default
+service nginx restart
