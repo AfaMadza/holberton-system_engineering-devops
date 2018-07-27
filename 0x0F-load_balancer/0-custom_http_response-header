@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 sudo apt-get -y update
 sudo apt-get -y install nginx
-service nginx start
+sudo service nginx start
 served_by="add_header X-Served-By \$hostname;\n"
-sed -i "30i $served_by" /etc/nginx/sites-available/default
-service nginx restart
+sudo sed -i "21i $served_by" /etc/nginx/sites-available/default
+sudo service nginx restart
