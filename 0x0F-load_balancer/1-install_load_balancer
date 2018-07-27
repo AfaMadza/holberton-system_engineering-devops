@@ -15,4 +15,4 @@ backend web_backend
 \thttp-request set-header X-Forwarded-Port %[dst_port]
 \tserver web-01 35.196.144.206:80 check
 \tserver web-02 35.237.246.199:80 check" | sudo tee -a $FILE
-sudo service haproxy res
+sudo service haproxy restart
