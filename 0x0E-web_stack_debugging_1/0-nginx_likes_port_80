@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Configures nginx server to listen on proper port
+pkill nginx
+sudo sed -i "21s/8080/80/" /etc/nginx/sites-enabled/default
+sudo sed -i "21s/8080/80/" /etc/nginx/sites-enabled/default
+sudo service nginx restart
