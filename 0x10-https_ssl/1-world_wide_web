@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Displays information about domains such as record and ip
+domain=$1
+subdomain=$2
+sub_ar=("www" "lb-01" "web-01" "web-02")
+ping_dom() {
+    response=$(dig "$1.$2" | awk 'c&&!--c;/ANSWER SECTION:/{c=1}')
+    read -ra resp <<<"$response"
+    echo "The subdomain $1 is a ${resp[3]} record and points to ${resp[4]}"
+}
+if [[ -z "$subdomain" ]]; then
+    for sub in "${sub_ar[@]}"; do
+	ping_dom "$sub" "$domain"
+    done
+elif [[ ! -z "$subdomain" ]]; then
+    ping_dom "$subdomain" "$domain"
+fi
