@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Backs up all databases on server and compresses to tar.gz
+mysqldump -uroot -p $1 --events --ignore-table=mysql.event --all-databases > backu\p.sql
+tar -czf `date +%d-%m-%Y`.tar.gz backup
