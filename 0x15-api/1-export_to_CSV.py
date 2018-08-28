@@ -2,9 +2,9 @@
 """
 This module contains a function that gathers data from an API
 """
+import csv
 import requests
 from sys import argv
-import csv
 
 
 def request_data(resource, id):
@@ -29,6 +29,7 @@ def display_api_data(id):
         file_writer = csv.writer(f, delimiter=',', quoting=csv.QUOTE_ALL)
         for t in todo:
             file_writer.writerow([id, name, t[0], t[1]])
+
 
 if __name__ == '__main__':
     if len(argv) > 1 and argv[1].isdigit():
