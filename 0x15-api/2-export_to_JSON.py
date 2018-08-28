@@ -2,9 +2,9 @@
 """
 This module contains a function that gathers data from an API
 """
+import json
 import requests
 from sys import argv
-import json
 
 
 def request_data(resource, id):
