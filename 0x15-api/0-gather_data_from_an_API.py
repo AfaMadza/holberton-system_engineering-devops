@@ -2,8 +2,8 @@
 """
 This module contains a function that gathers data from an API
 """
-from sys import argv
 import requests
+from sys import argv
 
 
 def request_data(resource, id):
